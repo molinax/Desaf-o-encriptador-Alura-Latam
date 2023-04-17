@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Archivos externos -->
+    <link rel="shortcut icon" href="./images/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script defer src="./js/main.js"></script>
+    <!-- Título -->
+    <title>Encriptador de texto</title>
+</head>
+<body>
+    <!-- Contenedor global -->
+    <div class="contenedor">
+        <!-- Encabezado -->
+        <header>
+            <img src="./images/logo.svg" alt="Logo de Alura Latam" class="logo">
+            <ul class="redes-contenedor">
+                <li>
+                    <a href="https://www.linkedin.com/in/ariel-molina-ortiz-b1a443271/" target="_blank">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://github.com/molinax" target="_blank">
+                        <i class="bi bi-github"></i>
+                    </a>
+                </li>
+            </ul>
+        </header>
+        <!-- Cuerpo de página -->
+        <main>
+            <!-- Encriptador -->
+            <section class="encriptador">
+                <!-- Encriptador: convertir texto -->
+                <article class="texto-a-convertir">
+                    <textarea  id="inputEntrada" class="input entrada" placeholder="Ingrese el texto aquí" oninput="this.value = this.value.toLowerCase()"></textarea>
+
+                    <div class="enviar-texto">
+                        <a class="btn encriptar" id="btnEncriptar" href="#">Encriptar</a>
+
+                        <p class="anotacion" id="textoInvalido"><i class="bi bi-exclamation-circle-fill" style="font-size: .95rem;"></i> Solo letras sin acentos</p>
+                        
+                        <p class="anotacion valido" id="textoValido" style="display: none;"><i class="bi bi-check-circle-fill" style="font-size: .95rem;"></i>Texto copiado</p>
+                    </div>
+                </article>
+                <!-- Encriptador: mostrar texto convertido -->
+                <article class="texto-convertido">
+                    <!-- Si el usuario no ha encriptado el texto, mostrar esto -->
+                    <div class="no-encontrado" id="noEncontrado" style="display: flex;">
+                        <img src="./images/ilustracion-gato.svg" alt="Ilustración de mensaje no encontrado " class="ilustracion">
+
+                        <h2 class="subtitulo">Ningún mensaje encontrado</h2>
+
+                        <p class="descripcion">Ingresa el texto que desees encriptar o desencriptar.</p>
+                    </div>
+                    <!-- En caso de que sí lo haya encriptado -->
+                    <div class="encontrado" id="encontrado" style="display: none;">
+                        <textarea id="inputSalida" class="input salida" readonly></textarea>
+
+                        <div class="botones">
+                            <button id="btnCopiar" class="btn copiar">Copiar</button>
+                            <button class="btn desencriptar" id="btnDesencriptar">Desencriptar</button>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <!-- Footer -->
+            <footer>
+                Hecho por <span>Ariel Molina.</span>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>
