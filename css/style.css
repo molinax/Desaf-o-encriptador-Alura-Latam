@@ -102,7 +102,7 @@ li {
     background-color: var(--secundario);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    min-height: 700px;
+    min-height: 650px;
 }
 
 /* Estilos de elementos de la página */
@@ -110,7 +110,6 @@ header {
     display: flex;
     gap: 1.5rem;
     align-items: center;
-    
     padding: .7rem .7rem 0 .7rem;
 }
 
@@ -151,7 +150,7 @@ header .redes-contenedor li a:hover {
 .encriptador .texto-a-convertir .enviar-texto {
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: .8rem;
 }
 
 .encriptador .texto-a-convertir .enviar-texto .anotacion {
